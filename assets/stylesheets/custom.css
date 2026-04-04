@@ -1,0 +1,63 @@
+:root {
+    --md-default-bg-color: #F8FAFC !important; /* 這是一個帶有現代感、閱讀起來很舒服的淺灰色 */
+}
+
+/* 更改頂部橫幅(Header)為指定的淡藍色 */
+.md-header {
+    background-color: #2A3035 !important; /* 這裡可以換成任何你喜歡的 Hex 色碼 */
+    color: #ffffff !important; /* 確保橫幅上的文字與圖示保持白色 */
+}
+
+/* 確保搜尋列的底色也能融入新的淡藍色 */
+.md-search__input {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 1. 直接隱藏左側導航列的標題 (刪除它！) */
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+    display: none !important;
+}
+
+.md-main__inner {
+    margin-top: 0 !important; /* 移除整體容器的頂部留白 */
+}
+
+/* 2. 讓左側面板「上下滿版」，移除預設的上下空隙 */
+.md-sidebar--primary {
+    background-color: #343131 !important;
+    margin: 0 !important; 
+    height: 100vh !important; /* 讓高度向下延伸填滿整個螢幕 */
+}
+
+/* 3. [魔法設定] 讓深色背景向左延伸，填滿螢幕左邊的白色留白 */
+.md-sidebar--primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0vw; /* 向左畫出一個超大的深色背景 */
+    right: 0;
+    background-color: #343131;
+    z-index: -1;
+}
+
+/* 4. 清除滾動區塊的圓角，讓它與背景完美融合 */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: transparent !important;
+    margin: 0 !important;
+    padding: 1.5rem 0 !important; /* 頂部留一點空間，讓第一行選單不要太貼齊上方藍色橫幅 */
+    border-radius: 0 !important;  
+}
+
+/* 5. 一般狀態的目錄文字與圖示顏色 (淺灰色) */
+.md-sidebar--primary .md-nav__link,
+.md-sidebar--primary .md-nav__icon {
+    color: #b0b0b0 !important;
+}
+
+/* 6. 滑鼠移過去，或者是「目前正在閱讀」的目錄項目特效 */
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--primary .md-nav__link--active {
+    color: #ffffff !important;
+    background-color: #4a4a4a !important;
+}
