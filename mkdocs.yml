@@ -1,0 +1,46 @@
+# 網站基本資訊
+site_name: Openclaw 小龍蝦機文件
+site_description: 開源小龍蝦機開發與組裝指南
+site_author: 你的名字/團隊名稱
+
+# 設定為 Material 主題
+theme:
+  name: material
+  language: zh-TW # 將介面（如搜尋列、提示字）設為繁體中文
+  logo: assets/images/jinpi-logo2.png       # 更改左上角網站 Logo
+  favicon: assets/images/jinpi-logo2.png   # 順便更改瀏覽器分頁標籤上的小圖示
+
+  features:
+    #- navigation.tabs # 在頂部開啟導覽分頁（如果分類很多的話很好用）
+    - navigation.top  # 右下角顯示「回到頂部」按鈕
+    - search.suggest  # 搜尋建議
+    #- toc.integrate   # 在頁面左側顯示目錄（Table of Contents）
+  # palette:
+  #   primary: blue
+
+# 版權宣告 (顯示在最下方)
+copyright: Copyright &copy; 2026 JinPi Technology Co., Ltd. All rights reserved - Openclaw Project
+
+# Markdown 擴充功能設定
+markdown_extensions:
+  - attr_list # 新增：支援為圖片或文字添加屬性 (如寬度、對齊)
+  - md_in_html # 新增：允許在 HTML 標籤中使用 Markdown
+  - admonition # 支援提示框 (如：注意、警告、提示)
+  - pymdownx.details # 支援可摺疊的提示框
+  - pymdownx.superfences # 支援進階程式碼區塊
+  - pymdownx.highlight: # 程式碼語法高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - assets/stylesheets/custom.css
+
+# 左側目錄導航設定
+nav:
+  - 🏠 首頁: index.md
+  - 🦖 安裝指南: installation.md
+  - 🚀 使用說明: manuals.md
+#  - 🛠️ 故障排除: troubleshooting.md
