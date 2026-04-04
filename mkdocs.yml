@@ -38,6 +38,9 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/custom.css
 
+extra:
+  generator: false
+
 # 左側目錄導航設定
 nav:
   - 🏠 首頁: index.md

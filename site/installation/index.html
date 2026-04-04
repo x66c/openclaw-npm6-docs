@@ -1,0 +1,815 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="開源小龍蝦機開發與組裝指南">
+      
+      
+        <meta name="author" content="你的名字/團隊名稱">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../manuals/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/jinpi-logo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>🦖 安裝指南 - Openclaw 小龍蝦機文件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openclaw" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href=".." title="Openclaw 小龍蝦機文件" class="md-header__button md-logo" aria-label="Openclaw 小龍蝦機文件" data-md-component="logo">
+      
+  <img src="../assets/images/jinpi-logo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Openclaw 小龍蝦機文件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🦖 安裝指南
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Openclaw 小龍蝦機文件" class="md-nav__button md-logo" aria-label="Openclaw 小龍蝦機文件" data-md-component="logo">
+      
+  <img src="../assets/images/jinpi-logo2.png" alt="logo">
+
+    </a>
+    Openclaw 小龍蝦機文件
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 首頁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🦖 安裝指南
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🦖 安裝指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 網路設定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 選擇大語言模型供應商
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 選擇大語言模型供應商">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選項 A：系統預設供應商 (Ollama) (推薦使用)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選項 B：自選供應商 (OpenClaw 內建清單)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 選擇互動介面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 選擇互動介面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-telegram-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Telegram Bot (預設推薦)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. LINE 官方帳號
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-web-tailscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Web 網頁介面 (搭配 Tailscale)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 注入靈魂：取個專屬名字
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 系統喚醒與安全配對
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 系統喚醒與安全配對">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 系統載入與喚醒
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 通訊軟體安全配對 (非常重要)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manuals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 使用說明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 網路設定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 選擇大語言模型供應商
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 選擇大語言模型供應商">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選項 A：系統預設供應商 (Ollama) (推薦使用)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選項 B：自選供應商 (OpenClaw 內建清單)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 選擇互動介面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 選擇互動介面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-telegram-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Telegram Bot (預設推薦)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. LINE 官方帳號
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-web-tailscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Web 網頁介面 (搭配 Tailscale)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 注入靈魂：取個專屬名字
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 系統喚醒與安全配對
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 系統喚醒與安全配對">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 系統載入與喚醒
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 通訊軟體安全配對 (非常重要)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="openclaw">🤖 OpenClaw 系統初始化指南</h1>
+<p>NPM6 龍蝦機專屬設定精靈，只需幾個簡單步驟，立即喚醒您的 AI 助理。</p>
+<hr />
+<h2 id="1">1. 網路設定</h2>
+<p>首先，請為您的龍蝦機連接網路。您可以根據您的環境選擇以下三種方式之一：</p>
+<ul>
+<li><strong>有線網路 (DHCP 自動取得)：</strong> 插入網路線後，系統將自動取得 IP 位址。
+  <img alt="有線網路 DHCP 設定" src="../assets/images/1-1.png" /></li>
+<li><strong>有線網路 (固定 IP)：</strong> 適合需要固定內部 IP 的進階使用者。
+  <img alt="有線網路 固定 IP 設定" src="../assets/images/1-2.png" /></li>
+<li><strong>無線網路 (Wi-Fi)：</strong> 選擇您家中的 Wi-Fi 基地台 (AP) 並輸入密碼即可連線。
+  <img alt="無線網路 Wi-Fi 設定" src="../assets/images/1-3.png" /></li>
+</ul>
+<h2 id="2">2. 選擇大語言模型供應商</h2>
+<h3 id="a-ollama">選項 A：系統預設供應商 (Ollama) <small><em>(推薦使用)</em></small></h3>
+<ol>
+<li><strong>已有 Ollama 帳戶：</strong> 請直接填入您註冊的 Email 即可。
+   <img alt="Ollama 帳戶登入" src="../assets/images/2-1.png" /></li>
+<li><strong>尚未擁有帳戶：</strong> 請點擊連結前往 Ollama 註冊頁面，建立帳號後再回來填入 Email。
+   <img alt="Ollama 註冊頁面" src="../assets/images/2-2.png" /></li>
+<li><strong>綁定設備：</strong> 填入 Email 後，點擊「執行 Ollama Login」。綁定成功後，<strong>務必點擊綠色按鈕打開 Ollama 確認網頁</strong>，以完成裝置連線授權。
+   <img alt="Ollama 確認網頁" src="../assets/images/2-1-1.png" />
+   <img alt="Ollama 裝置授權" src="../assets/images/2-1-2.png" /></li>
+</ol>
+<h3 id="b-openclaw">選項 B：自選供應商 (OpenClaw 內建清單)</h3>
+<p>如果您希望串接自己付費的商用大語言模型 (例如 OpenAI 等)，可在此選擇對應的供應商，並輸入您的 API Key 進行串接。
+<img alt="模型供應商介面" src="../assets/images/2-3.png" /></p>
+<h2 id="3">3. 選擇互動介面</h2>
+<p>設定您平時要用什麼軟體來呼叫您的龍蝦助理：</p>
+<h3 id="1-telegram-bot">1. Telegram Bot (預設推薦)</h3>
+<p>請在 Telegram APP 內搜尋 <code>BotFather</code> 來創建一個專屬的機器人，取得 Token 後，將其複製並貼回設定頁面即可。
+<img alt="Telegram Bot 設定" src="../assets/images/3-1.png" /></p>
+<h3 id="2-line">2. LINE 官方帳號</h3>
+<ol>
+<li>請前往 LINE Developers 後台創建一個 LINE Bot。</li>
+<li>在「Basic settings」頁籤找到 <strong>Channel secret</strong>，複製並貼回。</li>
+<li>在「Messaging API」頁籤找到 <strong>Channel access token</strong>，複製並貼回。</li>
+<li><strong>Webhook 設定：</strong> 同樣在「Messaging API」頁籤中，將 <code>Use webhook</code> 打開。設定完成後系統會配發一組專屬網址給您，請將該網址貼入 LINE 後台的 Webhook URL 欄位並點擊 Update。最後點擊 Verify 按鈕，看到成功訊息即代表設定完成。
+   <img alt="LINE Webhook 設定" src="../assets/images/3-2-2.png" /></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ 注意事項</p>
+<p>本產品產生之 LINE Webhook 網址，僅供本裝置的 LINE Bot 運作使用，不得挪作他用。</p>
+</div>
+<h3 id="3-web-tailscale">3. Web 網頁介面 (搭配 Tailscale)</h3>
+<p>這是 OpenClaw 官方推薦的安全網頁使用方式。點擊「啟動 Tailscale」獲取授權連結。若無帳號系統會引導註冊。</p>
+<div class="admonition info">
+<p class="admonition-title">💡 安全提示</p>
+<p>您的電腦、手機或平板也需要安裝 Tailscale APP。它會透過虛擬私人網路 (VPN) 技術，讓您的裝置與龍蝦機處於同一個安全的虛擬內網中，避免設備暴露於公開網路的風險。
+<br>
+<img alt="Tailscale 設定" src="../assets/images/3-3.png" /></p>
+</div>
+<h2 id="4">4. 注入靈魂：取個專屬名字</h2>
+<p>請為您的 AI 龍蝦助理取一個個性化的稱呼！他會記住這個名字，未來在任何對話介面中，您都可以用這個名字來呼喚他。
+<img alt="命名介面" src="../assets/images/4-1.png" /></p>
+<h2 id="5">5. 系統喚醒與安全配對</h2>
+<h3 id="1_1">1. 系統載入與喚醒</h3>
+<p>完成上述設定後，系統會倒數 10 秒進行設定載入與喚醒作業。
+<img alt="系統載入畫面" src="../assets/images/5-1.png" />
+<img alt="系統喚醒畫面" src="../assets/images/5-2.png" /></p>
+<p>完成後點擊「進入」按鈕前往 OpenClaw Hub 控制中心。<strong>(請記下畫面上的 IP 資訊，您日後也可以透過瀏覽器輸入此 IP 進入控制中心)</strong>
+<img alt="控制中心 IP 資訊" src="assets/images/5-3.png" /></p>
+<h3 id="2_1">2. 通訊軟體安全配對 <strong>(非常重要)</strong></h3>
+<p>進入控制中心後，為了防止陌生人盜用您的機器人額度，我們設計了安全配對機制：
+<img alt="控制中心介面" src="../assets/images/6-1.png" /></p>
+<ol>
+<li>請保持控制中心網頁開啟。</li>
+<li>前往您剛才設定的通訊軟體 (例如 Telegram)，對著您的機器人發送一則 <code>hi</code>。</li>
+<li>您的通訊軟體會收到一則帶有「配對碼 (Pairing code)」的系統訊息。
+   <img alt="收到配對碼" src="../assets/images/6-4.png" /></li>
+<li>回到控制中心網頁，上方會彈出一個「新裝置請求連線」的核准提示。</li>
+<li><strong>核對配對碼：</strong> 確認網頁上的配對碼與通訊軟體收到的一致，點擊「允許核准」即可完成綁定！
+   <img alt="核准配對綁定" src="../assets/images/6-3.png" /></li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">🎨 佈景主題小提示</p>
+<p>控制中心右上角有「太陽 / 月亮」圖示，點擊即可自由切換淺色模式或深色模式。
+<br>
+<img alt="切換佈景主題" src="../assets/images/6-2.png" /></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 JinPi Technology Co., Ltd. All rights reserved - Openclaw Project
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
