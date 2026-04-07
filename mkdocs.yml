@@ -45,5 +45,6 @@ extra:
 nav:
   - 🏠 首頁: index.md
   - 🦖 安裝指南: installation.md
-  - 🚀 使用說明: manuals.md
+  - 🚀 設備說明: manuals.md
+  - 🛠️ 使用範例: assembly.md
 #  - 🛠️ 故障排除: troubleshooting.md
