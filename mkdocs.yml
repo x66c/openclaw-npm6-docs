@@ -1,7 +1,8 @@
 # 網站基本資訊
-site_name: Openclaw 小龍蝦機文件
-site_description: 開源小龍蝦機開發與組裝指南
-site_author: 你的名字/團隊名稱
+site_name: AI助理 文件庫
+site_description: 說明與組裝指南
+site_author: Bear/JinPi Technology Co., Ltd.
+site_url: https://docs.jinpi.cc/openclaw/
 
 # 設定為 Material 主題
 theme:
@@ -46,5 +47,5 @@ nav:
   - 🏠 首頁: index.md
   - 🦖 安裝指南: installation.md
   - 🚀 設備說明: manuals.md
-  - 🛠️ 使用範例: assembly.md
+  - 🛠️ 使用範例: example.md
 #  - 🛠️ 故障排除: troubleshooting.md
