@@ -6,11 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="開源小龍蝦機開發與組裝指南">
+        <meta name="description" content="說明與組裝指南">
       
       
-        <meta name="author" content="你的名字/團隊名稱">
+        <meta name="author" content="Bear/JinPi Technology Co., Ltd.">
       
+      
+        <link rel="canonical" href="https://docs.jinpi.cc/openclaw/installation/">
       
       
         <link rel="prev" href="..">
@@ -27,7 +29,7 @@
     
     
       
-        <title>🦖 安裝指南 - Openclaw 小龍蝦機文件</title>
+        <title>🦖 安裝指南 - AI助理 文件庫</title>
       
     
     
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openclaw" class="md-skip">
+        <a href="#ai" class="md-skip">
           跳轉到
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="頁首">
-    <a href=".." title="Openclaw 小龍蝦機文件" class="md-header__button md-logo" aria-label="Openclaw 小龍蝦機文件" data-md-component="logo">
+    <a href=".." title="AI助理 文件庫" class="md-header__button md-logo" aria-label="AI助理 文件庫" data-md-component="logo">
       
   <img src="../assets/images/jinpi-logo2.png" alt="logo">
 
@@ -99,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Openclaw 小龍蝦機文件
+            AI助理 文件庫
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -185,12 +187,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Openclaw 小龍蝦機文件" class="md-nav__button md-logo" aria-label="Openclaw 小龍蝦機文件" data-md-component="logo">
+    <a href=".." title="AI助理 文件庫" class="md-nav__button md-logo" aria-label="AI助理 文件庫" data-md-component="logo">
       
   <img src="../assets/images/jinpi-logo2.png" alt="logo">
 
     </a>
-    Openclaw 小龍蝦機文件
+    AI助理 文件庫
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -287,6 +289,17 @@
       目錄
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初使化連接
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
@@ -480,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../assembly.md" class="md-nav__link">
+      <a href="../example/" class="md-nav__link">
         
   
   
@@ -525,6 +538,17 @@
       目錄
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初使化連接
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
@@ -693,9 +717,17 @@
 
 
 
-<h1 id="openclaw">🤖 OpenClaw 系統初始化指南</h1>
-<p>NPM6 龍蝦機專屬設定精靈，只需幾個簡單步驟，立即喚醒您的 AI 助理。</p>
+<h1 id="ai">🤖 AI助理 系統初始化指南</h1>
+<p>專屬設定精靈，只需幾個簡單步驟，立即喚醒您的 AI 助理。</p>
 <hr />
+<h2 id="_1">初使化連接</h2>
+<p>待系統紅燈恆亮之後，看到綠燈閃爍時即表示進入初使化安裝，<br />
+此時打開你的手機或電腦的WIFI設定處搜尋「openclawNPM6」開頭的網路並加入。
+<img alt="WIFI掃描介面" src="../assets/images/0-1.png" />  </p>
+<p><strong>無線網路的預設密碼為 : 12345678</strong><br />
+<img alt="WIFI密碼介面" src="../assets/images/0-2.png" />    </p>
+<p>接下來打開你的瀏覽器，輸入以下網址並連接： <strong>10.42.0.1</strong>
+<img alt="WIFI密碼介面" src="../assets/images/0-3.png" /> </p>
 <h2 id="1">1. 網路設定</h2>
 <p>首先，請為您的龍蝦機連接網路。您可以根據您的環境選擇以下三種方式之一：</p>
 <ul>
@@ -753,8 +785,7 @@
 <p>完成上述設定後，系統會倒數 10 秒進行設定載入與喚醒作業。
 <img alt="系統載入畫面" src="../assets/images/5-1.png" />
 <img alt="系統喚醒畫面" src="../assets/images/5-2.png" /></p>
-<p>完成後點擊「進入」按鈕前往 OpenClaw Hub 控制中心。<strong>(請記下畫面上的 IP 資訊，您日後也可以透過瀏覽器輸入此 IP 進入控制中心)</strong>
-<img alt="控制中心 IP 資訊" src="assets/images/5-3.png" /></p>
+<p>完成後點擊「進入」按鈕前往 OpenClaw Hub 控制中心。<strong>(請記下畫面上的 IP 資訊，您日後也可以透過瀏覽器輸入此 IP 進入控制中心)</strong></p>
 <h3 id="2_1">2. 通訊軟體安全配對 <strong>(非常重要)</strong></h3>
 <p>進入控制中心後，為了防止陌生人盜用您的機器人額度，我們設計了安全配對機制：
 <img alt="控制中心介面" src="../assets/images/6-1.png" /></p>

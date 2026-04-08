@@ -47,5 +47,7 @@ nav:
   - 🏠 首頁: index.md
   - 🦖 安裝指南: installation.md
   - 🚀 設備說明: manuals.md
-  - 🛠️ 使用範例: example.md
+  - ☰ 使用範例: 
+    - 🔮 占卜師: examples/fortune-teller.md
+
 #  - 🛠️ 故障排除: troubleshooting.md
