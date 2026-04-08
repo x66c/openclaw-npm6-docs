@@ -1,0 +1,1066 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="說明與組裝指南">
+      
+      
+        <meta name="author" content="Bear/JinPi Technology Co., Ltd.">
+      
+      
+        <link rel="canonical" href="https://docs.jinpi.cc/openclaw/examples/fortune-teller/">
+      
+      
+        <link rel="prev" href="../../manuals/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/jinpi-logo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>🔮 占卜師 - AI助理 文件庫</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#opecclaw" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../.." title="AI助理 文件庫" class="md-header__button md-logo" aria-label="AI助理 文件庫" data-md-component="logo">
+      
+  <img src="../../assets/images/jinpi-logo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI助理 文件庫
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔮 占卜師
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI助理 文件庫" class="md-nav__button md-logo" aria-label="AI助理 文件庫" data-md-component="logo">
+      
+  <img src="../../assets/images/jinpi-logo2.png" alt="logo">
+
+    </a>
+    AI助理 文件庫
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 首頁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🦖 安裝指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manuals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 設備說明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ☰ 使用範例
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ☰ 使用範例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔮 占卜師
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔮 占卜師
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 系統整體架構概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用戶主檔資料設計（共用部分）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 各占卜技術專屬資料設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 各占卜技術專屬資料設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 紫微斗數模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 易經模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 西洋占星模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 塔羅模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 共通「占卜紀錄」與考證追蹤設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 共通「占卜紀錄」與考證追蹤設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 占卜紀錄基本欄位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 考證追蹤欄位（Follow-up）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 意見格式與 UX 建議（中英雙語）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 意見格式與 UX 建議（中英雙語）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 回應格式建議（結構）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 中英示範骨架（以塔羅為例）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 系統整體架構概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用戶主檔資料設計（共用部分）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 各占卜技術專屬資料設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 各占卜技術專屬資料設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 紫微斗數模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 易經模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 西洋占星模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 塔羅模組
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 共通「占卜紀錄」與考證追蹤設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 共通「占卜紀錄」與考證追蹤設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 占卜紀錄基本欄位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 考證追蹤欄位（Follow-up）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 意見格式與 UX 建議（中英雙語）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 意見格式與 UX 建議（中英雙語）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 回應格式建議（結構）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 中英示範骨架（以塔羅為例）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="opecclaw">關於占卜師，請讓opecclaw自行學習紫微斗數，易經，西洋占星，塔羅牌等占卜技術，依此基礎讓用戶選擇偏好占卜師，並依據不同占星技巧維護用戶資料，考證追蹤，以及意見格式</h1>
+<p>先用產品設計的角度講結論：可以把「占卜師代理人」設計成一個多技能 Agent（紫微斗數、易經、西洋占星、塔羅），核心是「共用一份用戶主檔 + 各占卜技術自己的子資料結構 + 統一的占卜紀錄與追蹤格式」。</p>
+<hr />
+<h2 id="1">1. 系統整體架構概念</h2>
+<ul>
+<li>一個「占卜師主 Agent」（例如：opecclaw-FortuneTeller），內含 4 組子技能：<ul>
+<li>Zi Wei Dou Shu Skill（紫微斗數）</li>
+<li>I-Ching Skill（易經）</li>
+<li>Western Astrology Skill（西洋占星）</li>
+<li>Tarot Skill（塔羅）</li>
+</ul>
+</li>
+<li>共用一份 User Profile（包含基本資料 + 心理 / 生命議題標籤），每次占卜再寫入對應技術的子紀錄。這個做法類似 Zi Wei Dou Shu 分宮位、但以系統層面抽象成不同模組。</li>
+<li>所有占卜結果用一個「標準占卜紀錄格式」存起來，方便後續「考證追蹤」（驗證準確度）與意見回饋分析。</li>
+</ul>
+<hr />
+<h2 id="2">2. 用戶主檔資料設計（共用部分）</h2>
+<p>建議的 User Profile 結構（Pseudo Schema）：</p>
+<ul>
+<li>基本資料<ul>
+<li>user_id</li>
+<li>姓名 / 暱稱</li>
+<li>性別（含非二元選項）</li>
+<li>語言（zh-TW / en）</li>
+</ul>
+</li>
+<li>出生資訊（給紫微 + 西洋占星用）<ul>
+<li>西曆出生日期（yyyy-mm-dd）</li>
+<li>出生時間（hh:mm，是否精確）</li>
+<li>出生地（城市 + Country，未來可用時區修正）[^3]</li>
+</ul>
+</li>
+<li>占卜偏好<ul>
+<li>偏好占卜系統：ZiWei / IChing / Western / Tarot（多選權重）</li>
+<li>接受的風格：直白 / 溫和 / 勸導型 / 實務建議型</li>
+<li>接受預言時間尺度：短期（3 個月）、中期（1 年）、長期（3 年以上）</li>
+</ul>
+</li>
+<li>生活主題標籤（跨技術共用）<ul>
+<li>感情、婚姻</li>
+<li>職涯、工作變動</li>
+<li>財務、投資</li>
+<li>家庭、人際</li>
+<li>身心健康、精神壓力</li>
+</ul>
+</li>
+<li>風險 \&amp; 邊界<ul>
+<li>是否有身心疾病或重大壓力註記</li>
+<li>禁止觸及的題目（例如：死亡時間、疾病診斷、彩票號碼等）</li>
+</ul>
+</li>
+</ul>
+<p>這份主檔是所有占卜技術的共同基礎，ZWD / Astrology 在生成命盤時使用 DOB/Time/Place，易經與塔羅則主要用在語氣與情境解讀。</p>
+<hr />
+<h2 id="3">3. 各占卜技術專屬資料設計</h2>
+<h3 id="31">3.1 紫微斗數模組</h3>
+<p>紫微需要比較完整的命盤結構；專利與教學文章裡，基本都包含：個人資料 → 生成命盤 → 十二宮位＋星曜。你可以抽象成：命盤快照 + 解讀索引。</p>
+<ul>
+<li>基本欄位<ul>
+<li>ziwei_chart_id</li>
+<li>user_id</li>
+<li>命盤生成時間（用來區分「本命盤 / 大限盤 / 流年盤」）</li>
+<li>命盤類型：本命 / 流年 / 流月 / 問事占卦（若走牌卡式紫微占卜）[^8]</li>
+</ul>
+</li>
+<li>命盤核心結構（可 JSON）<ul>
+<li>十二宮陣列（命、兄弟、夫妻、子女、財帛、疾厄、遷移、僕役、官祿、田宅、福德、父母）</li>
+<li>每宮星曜列表（主星、輔星、煞星、祿權科忌等）[^1][^6]</li>
+<li>天干地支、身宮、四化</li>
+</ul>
+</li>
+<li>關聯標籤<ul>
+<li>此命盤主要應用領域（例如：感情、職涯）</li>
+<li>系統生成的重點宮位（如命、財、官、夫妻）標記，方便後續問事快速引用</li>
+</ul>
+</li>
+</ul>
+<p>如果走「紫微牌卡占卜」那一路，可以多加「占卜牌陣 / 抽牌結果」，讓零基礎使用者也能使用紫微問事。</p>
+<hr />
+<h3 id="32">3.2 易經模組</h3>
+<p>參考市面 I-Ching API 的做法，最重要是「卦象 + 動爻 + 變卦 + 詮釋」。</p>
+<ul>
+<li>iching_reading_id</li>
+<li>user_id</li>
+<li>問卦時間</li>
+<li>問卦類型：一般 / 感情 / 職涯 / 財務 / 健康（方便日後統計）</li>
+<li>占卜方式：三錢法 / 六爻蓍草 / 系統亂數</li>
+<li>本卦資訊<ul>
+<li>本卦編號（1–64）</li>
+<li>本卦名稱（乾、坤…）</li>
+<li>上卦 / 下卦</li>
+</ul>
+</li>
+<li>動爻與變卦<ul>
+<li>動爻位置列表（1–6）</li>
+<li>變卦編號 \&amp; 名稱</li>
+</ul>
+</li>
+<li>系統解讀<ul>
+<li>傳統義摘要（卦辭、爻辭的現代語意）</li>
+<li>現代化建議（愛情 / 職涯 / 決策面向）</li>
+<li>行動建議（1–3 條可執行建議）</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="33">3.3 西洋占星模組</h3>
+<p>西占常見設計：本命盤（Natal Chart）+ 12 宮、行星落點、Aspect、Transits。[ 類似處理方式可套用在西占]</p>
+<ul>
+<li>astro_chart_id</li>
+<li>user_id</li>
+<li>Chart 類型：Natal / Transit / Solar Return / Relationship（合盤）</li>
+<li>基本資料<ul>
+<li>生成時間（系統）</li>
+</ul>
+</li>
+<li>Chart 結構<ul>
+<li>12 宮：每宮主題 + 宫頭星座</li>
+<li>行星落點：行星 → 星座 → 宮位</li>
+<li>相位列表：行星1、行星2、角度類型（合相、沖、拱、刑…）</li>
+</ul>
+</li>
+<li>系統解讀（可拆模塊）<ul>
+<li>性格重點（太陽、月亮、上升）</li>
+<li>情感模式（⦿ 金星，⦿ 月亮組合）</li>
+<li>職涯傾向（中天、土星、火星等）</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="34">3.4 塔羅模組</h3>
+<p>可參考現有塔羅排陣紀錄模版：每次占卜一筆 Session，包含問題、牌陣、每張牌的位址與正逆位、解讀摘要與行動建議。</p>
+<ul>
+<li>tarot_session_id</li>
+<li>user_id</li>
+<li>占卜時間</li>
+<li>牌陣類型<ul>
+<li>單張（今日指引）</li>
+<li>三張（過去 / 現在 / 未來）</li>
+<li>十字 / 大十字 / 關係牌陣 …等</li>
+</ul>
+</li>
+<li>問題（原文）</li>
+<li>抽牌結果（Array）<ul>
+<li>牌名（Major / Minor，包含花色與數字）</li>
+<li>正位 / 逆位</li>
+<li>位置意義（如「過去」、「阻礙」、「建議」）</li>
+</ul>
+</li>
+<li>系統解讀<ul>
+<li>每張牌解讀摘要</li>
+<li>整體故事線 / 統整訊息</li>
+<li>建議行動（具體 2–3 點）</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="4">4. 共通「占卜紀錄」與考證追蹤設計</h2>
+<p>為了讓 opecclaw 可以做「驗證 \&amp; 追蹤準確度」，建議每一次占卜（不管用哪種技術）都寫進一個統一表格，例如「DivinationSession」。</p>
+<h3 id="41">4.1 占卜紀錄基本欄位</h3>
+<ul>
+<li>session_id</li>
+<li>user_id</li>
+<li>method（ZiWei / IChing / Western / Tarot / Mixed）</li>
+<li>問題描述（user 原文 + 系統重寫版）</li>
+<li>關聯主題標籤：感情 / 職涯 / 財運 / 健康 / 其他</li>
+<li>預測時間範圍：例如「未來 3 個月」、「一年內」、「本週」</li>
+<li>關鍵預測點（Normalized）<ul>
+<li>比如：升遷機率 ↑、分手風險 ↑、財務壓力 ↓…（用半結構化欄位方便日後統計）</li>
+</ul>
+</li>
+<li>建議行動清單（list of 建議）</li>
+</ul>
+<h3 id="42-follow-up">4.2 考證追蹤欄位（Follow-up）</h3>
+<p>之後用戶回來，可以讓 Agent 問：「上次我們講的 A/B/C 結果如何？」讓用戶回填。</p>
+<ul>
+<li>verification_status<ul>
+<li>未回覆 / 部分應驗 / 明顯應驗 / 未發生 / 相反發生</li>
+</ul>
+</li>
+<li>用戶回饋文字</li>
+<li>系統結論：<ul>
+<li>這次占卜準確度評分（1–5）</li>
+<li>誤差原因（時機 / 用戶行動改變 / 解讀偏差）</li>
+</ul>
+</li>
+</ul>
+<p>這種設計對日後做「模型微調」或 Prompt 優化很重要，類似 I-Ching API 或各種占卜服務搞的「用戶回饋 / 評分機制」。</p>
+<hr />
+<h2 id="5-ux">5. 意見格式與 UX 建議（中英雙語）</h2>
+<p>為了配合你「讓用戶選擇偏好占卜師」與「維護用戶資料」的需求，可以定義一套標準輸出格式，讓 openclaw 的其他 Agent 或前端很容易接。</p>
+<h3 id="51">5.1 回應格式建議（結構）</h3>
+<p>每一次 opecclaw-FortuneTeller 的回答，可維持以下區塊：</p>
+<ol>
+<li>問題摘要（系統重新定義問題）</li>
+<li>占卜技術 \&amp; 盤面 / 卦象 / 牌面說明（簡述）</li>
+<li>關鍵訊息（3–5 條 bullet）</li>
+<li>具體建議（行動導向）</li>
+<li>風險 \&amp; 注意事項（例如：非醫療 / 法律建議）</li>
+<li>追蹤建議（建議何時回來做 follow-up）</li>
+</ol>
+<h3 id="52">5.2 中英示範骨架（以塔羅為例）</h3>
+<ul>
+<li>中文（使用者看到）</li>
+</ul>
+<blockquote>
+<p>問題摘要：
+你想了解未來三個月在工作上的發展與變化。</p>
+<p>本次占卜：塔羅牌（三張牌陣：過去 / 現在 / 未來）</p>
+<p>關鍵訊息：
+- 過去：權杖九（正位）——長期承受壓力，仍然咬牙撐住。
+- 現在：星幣二（正位）——需要在多項任務間保持彈性與平衡。
+- 未來：世界（逆位）——階段性成果可能延遲，需要調整目標或期待。</p>
+<p>建議行動：
+1. 先盤點目前手上的專案與責任，清楚列出優先順序。
+2. 與主管或關鍵同事溝通你的負荷與期待，避免悶著頭硬撐。
+3. 將「一定要達成」與「可以調整」的目標區分開來，降低挫折感。</p>
+<p>提醒：占卜提供的是趨勢與建議，不是絕對結果，你的行動仍然可以改變未來。</p>
+</blockquote>
+<ul>
+<li>English（給 Agent / 系統記錄或未來國際化）</li>
+</ul>
+<blockquote>
+<p>Summary of question: Career development within the next 3 months.
+Method: Tarot, 3-card spread (Past / Present / Future).
+Insights: …
+Actionable advice: …</p>
+</blockquote>
+<p>你可以在 openclaw 裡把這些欄位做成「Response Template」，每種技術掛同一套骨架，但細部內容由對應 skill 產生。</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 JinPi Technology Co., Ltd. All rights reserved - Openclaw Project
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
