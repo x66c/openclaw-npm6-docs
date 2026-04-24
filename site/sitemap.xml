@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.jinpi.cc/openclaw/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/example/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/installation/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/manuals/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/troubleshooting/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.jinpi.cc/openclaw/examples/fortune-teller/</loc>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/hardware/pinout/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
     <url>
          <loc>https://docs.jinpi.cc/openclaw/software/firmware/</loc>
-         <lastmod>2026-04-07</lastmod>
+         <lastmod>2026-04-08</lastmod>
     </url>
 </urlset>
